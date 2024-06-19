@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.growthtrack.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_diagnose2"
+            app:destination="@id/navigation_diagnose" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_rumahsakit2"
+            app:destination="@id/navigation_rumahsakit" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_history2"
+            app:destination="@id/navigation_history" />
+        <action
+            android:id="@+id/action_navigation_home_to_articleActivity"
+            app:destination="@id/articleActivity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_rumahsakit"
+        android:name="com.example.growthtrack.ui.dashboard.RumahSakit"
+        android:label="Rumah Sakit"
+        tools:layout="@layout/fragment_rumahsakit" />
+
+    <fragment
+        android:id="@+id/navigation_diagnose"
+        android:name="com.example.growthtrack.ui.diagnose.Diagnose"
+        android:label="Diagnose"
+        tools:layout="@layout/fragment_diagnose" >
+        <action
+            android:id="@+id/action_navigation_diagnose_to_stunting"
+            app:destination="@id/stunting" />
+        <action
+            android:id="@+id/action_navigation_diagnose_to_sehat"
+            app:destination="@id/sehat" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.growthtrack.ui.Profile"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/navigation_history"
+        android:name="com.example.growthtrack.ui.history.History"
+        android:label="Histori"
+        tools:layout="@layout/fragment_history" />
+    <activity
+        android:id="@+id/stunting"
+        android:name="com.example.growthtrack.ui.diagnose.Stunting"
+        android:label="activity_stunting"
+        tools:layout="@layout/activity_stunting" />
+    <activity
+        android:id="@+id/sehat"
+        android:name="com.example.growthtrack.ui.diagnose.fragment.sehat"
+        android:label="activity_sehat"
+        tools:layout="@layout/activity_sehat" />
+    <activity
+        android:id="@+id/articleActivity"
+        android:name="com.example.growthtrack.ui.ArticleActivity"
+        android:label="activity_article"
+        tools:layout="@layout/activity_article" />
+</navigation>
